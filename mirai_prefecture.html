@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>みらい県｜地域で挑戦する起業家を応援します</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Meiryo,
+        sans-serif;
+    color: #263238;
+    background: #f5f8f6;
+}
+
+/* ===== 上部 ===== */
+
+.demo-bar {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 23px;
+    color: #176b5b;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #16806c;
+}
+
+/* ===== メインビジュアル ===== */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(12, 83, 70, 0.82),
+            rgba(12, 83, 70, 0.82)
+        ),
+        linear-gradient(120deg, #9ac8b9, #d9eee5);
+
+    color: white;
+    padding: 90px 25px;
+}
+
+.hero-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.hero-label {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.7);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.35;
+    margin: 0 0 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 720px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-main {
+    background: #f2b84b;
+    color: #263238;
+}
+
+.btn-white {
+    background: white;
+    color: #176b5b;
+}
+
+/* ===== セクション ===== */
+
+section {
+    padding: 70px 25px;
+}
+
+.section-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title small {
+    color: #16806c;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* ===== 課題 ===== */
+
+.problem {
+    background: white;
+}
+
+.problem-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.problem-card {
+    padding: 30px;
+    background: #f5f8f6;
+    border-top: 4px solid #16806c;
+}
+
+.problem-card .number {
+    font-size: 35px;
+    font-weight: bold;
+    color: #16806c;
+}
+
+.problem-card h3 {
+    margin: 10px 0;
+}
+
+/* ===== 制度 ===== */
+
+.support {
+    background: #eef6f2;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.support-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.support-icon {
+    font-size: 35px;
+}
+
+.support-card h3 {
+    color: #176b5b;
+}
+
+.money {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d48b18;
+}
+
+/* ===== 条件 ===== */
+
+.conditions {
+    background: white;
+}
+
+.condition-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.condition {
+    display: flex;
+    gap: 20px;
+    padding: 22px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.condition-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #176b5b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ===== 流れ ===== */
+
+.flow {
+    background: #f5f8f6;
+}
+
+.flow-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+}
+
+.flow-item {
+    background: white;
+    padding: 25px;
+    width: 20%;
+    text-align: center;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.flow-item:not(:last-child)::after {
+    content: "▶";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #16806c;
+    z-index: 2;
+}
+
+.flow-number {
+    color: #16806c;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* ===== メリット ===== */
+
+.effects {
+    background: white;
+}
+
+.effect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.effect {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.effect-icon {
+    font-size: 48px;
+}
+
+.effect h3 {
+    color: #176b5b;
+}
+
+/* ===== 注意点 ===== */
+
+.challenge {
+    background: #fff9ed;
+}
+
+.challenge-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-left: 5px solid #e0a334;
+    padding: 30px;
+}
+
+.challenge-box li {
+    margin: 15px 0;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+    background: #176b5b;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 32px;
+}
+
+.cta p {
+    line-height: 1.9;
+}
+
+.apply-btn {
+    margin-top: 20px;
+    background: #f2b84b;
+    color: #263238;
+}
+
+/* ===== モーダル ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 35px;
+    position: relative;
+    animation: popup .25s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+.submit {
+    width: 100%;
+    background: #176b5b;
+    color: white;
+}
+
+/* ===== フッター ===== */
+
+footer {
+    background: #263238;
+    color: white;
+    padding: 35px 25px;
+}
+
+.footer-inner {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-note {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+/* ===== スマホ ===== */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .problem-box,
+    .support-grid,
+    .effect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-container {
+        flex-direction: column;
+    }
+
+    .flow-item {
+        width: 100%;
+    }
+
+    .flow-item:not(:last-child)::after {
+        content: "▼";
+        right: 50%;
+        top: auto;
+        bottom: -15px;
+        transform: translateX(50%);
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 探究学習用表示 -->
+<div class="demo-bar">
+    ※これは探究学習のために作成した架空の政策サイトです
+</div>
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo">
+            みらい県
+            <span>Mirai Prefecture</span>
+        </div>
+
+        <nav>
+            <a href="#about">制度について</a>
+            <a href="#support">支援内容</a>
+            <a href="#conditions">参加条件</a>
+            <a href="#effects">地域への効果</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-label">
+            みらい県 地域活性化政策
+        </div>
+
+        <h1>
+            あなたの「やってみたい」を<br>
+            この県で。
+        </h1>
+
+        <p>
+            起業したい。でも、資金も場所も人脈もない。<br>
+            そんなあなたの挑戦を、みらい県が応援します。
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#support" class="btn btn-main">
+                支援制度を見る
+            </a>
+
+            <button class="btn btn-white" onclick="openModal()">
+                起業について相談する
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="problem" id="about">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>WHY MIRAI?</small>
+
+            <h2>
+                地域が抱える課題
+            </h2>
+
+            <p>
+                人口減少を止め、地域に新しい仕事と人の流れをつくる。
+            </p>
+
+        </div>
+
+
+        <div class="problem-box">
+
+            <div class="problem-card">
+
+                <div class="number">01</div>
+
+                <h3>人口減少</h3>
+
+                <p>
+                    若い世代が都市部へ流出し、
+                    地域の人口減少が進んでいます。
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="number">02</div>
+
+                <h3>仕事の減少</h3>
+
+                <p>
+                    地域で働ける仕事の選択肢が少なく、
+                    若者が地元を離れる原因となっています。
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="number">03</div>
+
+                <h3>地域経済の縮小</h3>
+
+                <p>
+                    人口が減ることで消費も減少し、
+                    商店やサービスの維持が難しくなります。
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="support" id="support">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>SUPPORT PROGRAM</small>
+
+            <h2>
+                起業家を県外から呼び込みます
+            </h2>
+
+            <p>
+                「ここで挑戦したい」という人を、資金・場所・PRの面から支援します。
+            </p>
+
+        </div>
+
+
+        <div class="support-grid">
+
+            <div class="support-card">
+
+                <div class="support-icon">💰</div>
+
+                <h3>起業スタート支援</h3>
+
+                <p>
+                    県外から移住して起業する方の
+                    初期費用をサポートします。
+                </p>
+
+                <div class="money">
+                    最大300万円
+                </div>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-icon">🏢</div>
+
+                <h3>オフィス・土地支援</h3>
+
+                <p>
+                    空き店舗や公共施設などを活用し、
+                    起業に必要な場所を提供します。
+                </p>
+
+                <div class="money">
+                    低額・優遇利用
+                </div>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-icon">🤝</div>
+
+                <h3>地域とのマッチング</h3>
+
+                <p>
+                    地元企業や自治体、地域住民との
+                    つながりづくりをサポートします。
+                </p>
+
+                <div class="money">
+                    県がサポート
+                </div>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-icon">📣</div>
+
+                <h3>県によるPR</h3>
+
+                <p>
+                    「みらい県発の企業」として
+                    県の広報などで全国へPRします。
+                </p>
+
+                <div class="money">
+                    全国へ発信
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONDITIONS -->
+
+<section class="conditions" id="conditions">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>CONDITIONS</small>
+
+            <h2>
+                支援を受けるための条件
+            </h2>
+
+            <p>
+                地域と一緒に成長していく企業を支援します。
+            </p>
+
+        </div>
+
+
+        <div class="condition-list">
+
+            <div class="condition">
+
+                <div class="condition-number">1</div>
+
+                <div>
+                    <strong>県内で起業・事業所を設置すること</strong>
+                    <br>
+                    県外からみらい県へ事業の拠点を移します。
+                </div>
+
+            </div>
+
+
+            <div class="condition">
+
+                <div class="condition-number">2</div>
+
+                <div>
+                    <strong>原則3年以上、県内で事業を継続すること</strong>
+                    <br>
+                    一時的な進出ではなく、地域に根付くことを目指します。
+                </div>
+
+            </div>
+
+
+            <div class="condition">
+
+                <div class="condition-number">3</div>
+
+                <div>
+                    <strong>地域とのつながりをつくること</strong>
+                    <br>
+                    地元企業や住民との協力を積極的に行います。
+                </div>
+
+            </div>
+
+
+            <div class="condition">
+
+                <div class="condition-number">4</div>
+
+                <div>
+                    <strong>地域への貢献を目指すこと</strong>
+                    <br>
+                    雇用創出や地域課題の解決などにつなげます。
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FLOW -->
+
+<section class="flow">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>HOW IT WORKS</small>
+
+            <h2>
+                起業までの流れ
+            </h2>
+
+        </div>
+
+
+        <div class="flow-container">
+
+            <div class="flow-item">
+                <div class="flow-number">STEP 01</div>
+                <h3>相談</h3>
+                <p>県に起業について相談</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">STEP 02</div>
+                <h3>審査</h3>
+                <p>事業計画を審査</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">STEP 03</div>
+                <h3>移住</h3>
+                <p>県内に拠点を設置</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">STEP 04</div>
+                <h3>起業</h3>
+                <p>事業をスタート</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">STEP 05</div>
+                <h3>地域と成長</h3>
+                <p>地域とともに発展</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EFFECTS -->
+
+<section class="effects" id="effects">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>EXPECTED EFFECT</small>
+
+            <h2>
+                この政策で目指す未来
+            </h2>
+
+        </div>
+
+
+        <div class="effect-grid">
+
+            <div class="effect">
+
+                <div class="effect-icon">👨‍👩‍👧‍👦</div>
+
+                <h3>人口の増加</h3>
+
+                <p>
+                    起業家やその家族が移住することで、
+                    新しい住民を増やします。
+                </p>
+
+            </div>
+
+
+            <div class="effect">
+
+                <div class="effect-icon">💼</div>
+
+                <h3>雇用の創出</h3>
+
+                <p>
+                    新しい企業が生まれることで、
+                    地域で働ける場所が増えます。
+                </p>
+
+            </div>
+
+
+            <div class="effect">
+
+                <div class="effect-icon">🌱</div>
+
+                <h3>地域の活性化</h3>
+
+                <p>
+                    新しい企業と地域企業がつながり、
+                    地域経済を活性化させます。
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROBLEMS -->
+
+<section class="challenge">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <small>CHALLENGES</small>
+
+            <h2>
+                この政策にも課題があります
+            </h2>
+
+            <p>
+                「支援すればすべて解決」というわけではありません。
+            </p>
+
+        </div>
+
+
+        <div class="challenge-box">
+
+            <ul>
+
+                <li>
+                    <strong>支援終了後に企業が県外へ移転する可能性</strong>
+                </li>
+
+                <li>
+                    <strong>県外から来た企業だけを優遇すると、
+                    県内企業との公平性が問題になる可能性</strong>
+                </li>
+
+                <li>
+                    <strong>補助金目当てで移住する人が出る可能性</strong>
+                </li>
+
+                <li>
+                    <strong>企業が増えても、必ずしも人口増加につながるとは限らない</strong>
+                </li>
+
+                <li>
+                    <strong>県の財政負担が大きくなる可能性</strong>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="section-inner">
+
+        <h2>
+            あなたの挑戦が、地域の未来を変える。
+        </h2>
+
+        <p>
+            「こんな事業をやってみたい」<br>
+            そのアイデアを、みらい県で形にしてみませんか？
+        </p>
+
+        <button
+            class="btn apply-btn"
+            onclick="openModal()">
+            起業相談を申し込む
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <strong>みらい県</strong>
+            <p>地域活性化・起業支援プロジェクト</p>
+        </div>
+
+        <div>
+            <strong>お問い合わせ</strong>
+            <p>みらい県 地域政策課</p>
+            <p>000-0000-0000</p>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        ※本サイトは学校での探究学習・発表を目的とした架空の政策サイトです。
+        実在する自治体・制度・連絡先とは関係ありません。
+    </div>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <div class="close" onclick="closeModal()">×</div>
+
+        <h2>起業相談フォーム</h2>
+
+        <p>
+            あなたの「やってみたい」を教えてください。
+        </p>
+
+        <form onsubmit="submitForm(event)">
+
+            <label>お名前</label>
+            <input
+                type="text"
+                placeholder="例：山田 太郎"
+                required>
+
+            <label>現在お住まいの地域</label>
+            <input
+                type="text"
+                placeholder="例：東京都"
+                required>
+
+            <label>考えている事業</label>
+            <select required>
+
+                <option value="">選択してください</option>
+                <option>飲食・観光</option>
+                <option>IT・デジタル</option>
+                <option>農業・食品</option>
+                <option>教育</option>
+                <option>地域サービス</option>
+                <option>その他</option>
+
+            </select>
+
+            <label>事業について</label>
+
+            <textarea
+                placeholder="どんな事業をしたいか教えてください。">
+            </textarea>
+
+            <button
+                type="submit"
+                class="btn submit">
+                相談を申し込む
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ===== スムーズスクロール ===== */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const target =
+            document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
+
+
+/* ===== モーダル ===== */
+
+function openModal() {
+
+    document
+        .getElementById("modal")
+        .classList.add("active");
+
+}
+
+
+function closeModal() {
+
+    document
+        .getElementById("modal")
+        .classList.remove("active");
+
+}
+
+
+/* モーダル外クリック */
+
+document
+    .getElementById("modal")
+    .addEventListener("click", function(e) {
+
+        if (e.target === this) {
+
+            closeModal();
+
+        }
+
+    });
+
+
+/* ===== 送信 ===== */
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    alert(
+        "ありがとうございます！\n\n" +
+        "これは探究学習用のデモサイトです。\n" +
+        "実際には申し込みは送信されません。"
+    );
+
+    closeModal();
+
+}
+
+</script>
+
+</body>
+</html>
